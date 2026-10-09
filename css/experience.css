@@ -1,0 +1,42 @@
+/* ============================================================
+   Experience Section — Timeline
+   ============================================================ */
+.timeline {
+    position: relative;
+    max-width: 760px;
+    margin-inline: auto;
+    padding-left: 2.5rem;
+}
+.timeline::before {
+    content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px;
+    width: 2px; background: linear-gradient(var(--accent), var(--accent-2), transparent);
+}
+
+.timeline__item { position: relative; margin-bottom: var(--space-sm); }
+.timeline__item:last-child { margin-bottom: 0; }
+
+.timeline__dot {
+    position: absolute; left: -2.5rem; top: 6px;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--grad-accent);
+    box-shadow: 0 0 0 4px rgba(124,92,255,0.15), 0 0 14px 1px var(--accent-glow);
+}
+
+.timeline__card {
+    padding: 1.6rem 1.8rem;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+.timeline__card:hover { transform: translateX(6px); border-color: var(--border-strong); }
+
+.timeline__period {
+    display: inline-block;
+    font-family: var(--font-head); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.05em; color: var(--accent-2);
+    padding: 0.25rem 0.7rem; border-radius: 999px;
+    background: var(--surface-strong); border: 1px solid var(--border);
+    margin-bottom: 0.7rem;
+}
+.timeline__role { font-size: 1.2rem; margin-bottom: 0.25rem; }
+.timeline__company { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-soft); font-size: 0.9rem; font-weight: 500; }
+.timeline__company i { color: var(--accent); }
+.timeline__desc { margin-top: 0.75rem; color: var(--text-soft); font-size: 0.92rem; }

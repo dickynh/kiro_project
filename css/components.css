@@ -1,0 +1,69 @@
+/* ============================================================
+   Reusable Components — buttons, glass cards, section heads
+   ============================================================ */
+
+/* ---------- Glassmorphism ---------- */
+.glass {
+    background: var(--surface);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+    white-space: nowrap;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn:active { transform: translateY(-1px); }
+
+.btn--primary { background: var(--grad-accent); color: #fff; box-shadow: 0 10px 30px -10px var(--accent-glow); }
+.btn--primary:hover { box-shadow: 0 16px 40px -10px var(--accent-glow); }
+
+.btn--glow { position: relative; }
+.btn--glow::after {
+    content: ""; position: absolute; inset: -2px; border-radius: inherit;
+    background: var(--grad-accent); filter: blur(16px); opacity: 0.55; z-index: -1;
+    transition: opacity var(--transition-fast);
+}
+.btn--glow:hover::after { opacity: 0.9; }
+
+.btn--ghost { background: var(--surface); color: var(--text); border-color: var(--border-strong); backdrop-filter: blur(var(--blur)); }
+.btn--ghost:hover { background: var(--surface-strong); border-color: var(--accent); }
+
+/* ---------- Section head ---------- */
+.section__head { text-align: center; margin-bottom: var(--space-lg); }
+.section__eyebrow {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 0.75rem;
+}
+.section__title { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; }
+.section__subtitle { max-width: 52ch; margin: 1rem auto 0; color: var(--text-soft); font-size: 1.02rem; }
+
+.btn--sm { padding: 0.55rem 1.1rem; font-size: 0.88rem; }
+.btn--full { width: 100%; justify-content: center; }
+
+/* ---------- Floating util ---------- */
+.floating { animation: floating 6s ease-in-out infinite; }
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-16px); }
+}

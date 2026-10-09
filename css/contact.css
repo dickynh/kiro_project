@@ -1,0 +1,85 @@
+/* ============================================================
+   Contact Section
+   ============================================================ */
+.contact__grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: var(--space-md);
+    align-items: start;
+}
+
+/* Info column */
+.contact__info { display: grid; gap: var(--space-sm); }
+.contact__info-card { padding: 2rem; }
+.contact__info-title { font-size: 1.3rem; margin-bottom: 0.6rem; }
+.contact__info-text { color: var(--text-soft); font-size: 0.95rem; margin-bottom: 1.5rem; }
+
+.contact__info-items { display: grid; gap: 1.1rem; margin-bottom: 1.6rem; }
+.contact__info-item { display: flex; align-items: center; gap: 0.9rem; }
+.contact__info-icon {
+    display: grid; place-items: center; flex-shrink: 0;
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--surface-strong); border: 1px solid var(--border);
+    color: var(--accent-2);
+}
+.contact__info-label { display: block; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); }
+.contact__info-value { color: var(--text); font-weight: 500; transition: color var(--transition-fast); }
+a.contact__info-value:hover { color: var(--accent-2); }
+
+.contact__socials { display: flex; gap: 0.6rem; }
+.contact__socials a {
+    display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px;
+    background: var(--surface-strong); border: 1px solid var(--border); color: var(--text-soft);
+    transition: transform var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+}
+.contact__socials a:hover { transform: translateY(-3px); background: var(--accent); color: #fff; }
+
+/* Map placeholder */
+.contact__map { padding: 0; overflow: hidden; }
+.contact__map-placeholder {
+    aspect-ratio: 16 / 7;
+    display: grid; place-items: center; align-content: center; gap: 0.3rem;
+    text-align: center;
+    background:
+        radial-gradient(circle at 30% 40%, rgba(124,92,255,0.22), transparent 55%),
+        radial-gradient(circle at 70% 60%, rgba(34,211,238,0.18), transparent 55%),
+        var(--surface);
+    color: var(--text-soft);
+}
+.contact__map-placeholder i { font-size: 2.4rem; color: var(--accent-2); margin-bottom: 0.3rem; }
+.contact__map-placeholder p { font-weight: 600; color: var(--text); }
+.contact__map-placeholder span { font-size: 0.82rem; color: var(--text-dim); }
+
+/* Form */
+.contact__form-card { padding: 2.2rem; }
+.form__group { margin-bottom: 1.3rem; }
+.form__label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-soft); }
+
+.form__input-wrapper { position: relative; }
+.form__input-icon {
+    position: absolute; left: 1rem; top: 1rem; color: var(--text-dim);
+    transition: color var(--transition-fast); pointer-events: none;
+}
+.form__input-icon--textarea { top: 1rem; }
+
+.form__input {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.7rem;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    color: var(--text); font-family: var(--font-body); font-size: 0.95rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.form__input::placeholder { color: var(--text-dim); }
+.form__input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124,92,255,0.18); }
+.form__input:focus + .form__input-icon,
+.form__input-wrapper:focus-within .form__input-icon { color: var(--accent-2); }
+.form__textarea { resize: vertical; min-height: 130px; }
+
+.form__input.is-invalid { border-color: #f43f5e; box-shadow: 0 0 0 3px rgba(244,63,94,0.15); }
+.form__error { display: block; min-height: 1rem; margin-top: 0.35rem; font-size: 0.8rem; color: #fb7185; }
+
+.btn--full { width: 100%; justify-content: center; }
+
+.form__feedback { margin-top: 1rem; font-size: 0.9rem; text-align: center; min-height: 1.2rem; }
+.form__feedback.is-success { color: #34d399; }
+.form__feedback.is-error { color: #fb7185; }

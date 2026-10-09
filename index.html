@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dicky Nofyan Hidayat, ST, Gr — Full Stack AI Engineer. Membangun pengalaman digital cerdas dengan AI dan teknologi web modern." />
+    <title>Dicky Nofyan Hidayat, ST, Gr — Full Stack AI Engineer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/testimonials.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+    <!-- Animated gradient background -->
+    <div class="bg-gradient" aria-hidden="true">
+        <div class="bg-orb bg-orb--1"></div>
+        <div class="bg-orb bg-orb--2"></div>
+        <div class="bg-orb bg-orb--3"></div>
+        <div class="bg-grid"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header" data-component="navbar">
+        <nav class="nav container" aria-label="Primary navigation">
+            <a href="#home" class="nav__logo">
+                DN
+            </a>
+
+            <ul class="nav__list" id="navList">
+                <li><a href="#home"   class="nav__link">Home</a></li>
+                <li><a href="#about"  class="nav__link">About</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#projects" class="nav__link">Projects</a></li>
+                <li><a href="#experience" class="nav__link">Experience</a></li>
+                <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+
+            <a href="assets/resume-dicky-nofyan-hidayat.pdf" download class="btn btn--primary btn--sm nav__cta">
+                <i class="fa-solid fa-download"></i> Resume
+            </a>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section id="home" class="hero" data-component="hero">
+            <div class="hero__particles" id="hero-particles" aria-hidden="true"></div>
+
+            <div class="container hero__inner">
+                <div class="hero__content reveal">
+                    <span class="hero__badge">
+                        <span class="hero__badge-dot"></span>
+                        Available for opportunities
+                    </span>
+
+                    <h1 class="hero__title">
+                        Halo, saya <span class="accent-text">Dicky Nofyan Hidayat, ST, Gr</span>
+                    </h1>
+
+                    <h2 class="hero__typewriter">
+                        <span class="hero__typewriter-prefix">Seorang </span>
+                        <span class="hero__typewriter-text" id="typewriter"></span>
+                        <span class="hero__caret">|</span>
+                    </h2>
+
+                    <p class="hero__tagline">
+                        Membangun pengalaman digital cerdas dengan AI dan teknologi web modern.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="#" class="btn btn--primary btn--glow">
+                            Lihat Project
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                        <a href="#" class="btn btn--ghost">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+                            Download Resume
+                        </a>
+                    </div>
+
+                    <ul class="hero__socials" aria-label="Media sosial">
+                        <li><a href="https://github.com/vitaanggraenisdev" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/vitaanggraenidev" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a></li>
+                        <li><a href="https://x.com/vitaanggraenidev" target="_blank" rel="noopener" aria-label="Twitter / X">Twitter</a></li>
+                    </ul>
+                </div>
+
+                <div class="hero__visual reveal">
+                    <div class="hero__photo-wrap floating">
+                        <div class="hero__photo-glow"></div>
+                        <div class="hero__photo">
+                            <img src="assets/dqnhbaru.jpg" alt="Foto profil Dicky Nofyan Hidayat, ST, Gr" class="hero__photo-img" loading="eager" />
+                            <span class="hero__photo-flash" aria-hidden="true"></span>
+                        </div>
+
+                        <!-- Efek petir / lightning -->
+                        <svg class="hero__lightning" viewBox="0 0 400 400" aria-hidden="true">
+                            <g class="bolt bolt--1">
+                                <polyline points="200,20 182,120 214,130 170,250 220,160 192,152 230,60" />
+                            </g>
+                            <g class="bolt bolt--2">
+                                <polyline points="30,120 90,150 70,180 140,210 95,205 120,250" />
+                            </g>
+                            <g class="bolt bolt--3">
+                                <polyline points="370,160 320,190 345,215 290,260 335,250 310,300" />
+                            </g>
+                            <g class="bolt bolt--4">
+                                <polyline points="210,390 196,320 224,315 188,250 232,310 206,312" />
+                            </g>
+                        </svg>
+
+                        <div class="hero__chip hero__chip--1">AI</div>
+                        <div class="hero__chip hero__chip--2">&lt;/&gt;</div>
+                        <div class="hero__chip hero__chip--3">⚡</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="hero__scroll" aria-label="Scroll ke bawah">
+                <span class="hero__scroll-mouse"></span>
+                <span class="hero__scroll-text">Scroll</span>
+            </a>
+        </section>
+
+        <!-- ============ ABOUT ============ -->
+        <section id="about" class="about section" data-component="about">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">01 — About</span>
+                    <h2 class="section__title">Tentang Saya</h2>
+                </div>
+
+                <div class="about__grid">
+                    <div class="about__bio reveal">
+                        <div class="glass about__card">
+                            <p class="about__lead">
+                                Dicky Nofyan Hidayat, ST, Gr adalah seorang <strong>full-stack AI engineer</strong> yang
+                                bersemangat dengan keahlian di frontend development, backend systems, cloud
+                                deployment, dan aplikasi berbasis AI.
+                            </p>
+                            <p>
+                                He specializes in building scalable web platforms, intelligent automation
+                                tools, and modern user experiences. He enjoys solving real-world problems
+                                through clean architecture and innovative technologies.
+                            </p>
+
+                            <ul class="about__highlights">
+                                <li><span class="about__dot"></span> Scalable web platforms &amp; clean architecture</li>
+                                <li><span class="about__dot"></span> Intelligent automation &amp; AI-powered apps</li>
+                                <li><span class="about__dot"></span> Modern, delightful user experiences</li>
+                            </ul>
+
+                            <div class="about__meta">
+                                <span>📍 Jakarta, Indonesia</span>
+                                <span>✉️ vita@prestasijunior.org</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about__stats reveal">
+                        <div class="glass stat-card">
+                            <span class="stat-card__num" data-count="5">0</span><span class="stat-card__plus">+</span>
+                            <span class="stat-card__label">Tahun Pengalaman</span>
+                        </div>
+                        <div class="glass stat-card">
+                            <span class="stat-card__num" data-count="40">0</span><span class="stat-card__plus">+</span>
+                            <span class="stat-card__label">Project Selesai</span>
+                        </div>
+                        <div class="glass stat-card">
+                            <span class="stat-card__num" data-count="25">0</span><span class="stat-card__plus">+</span>
+                            <span class="stat-card__label">Klien Puas</span>
+                        </div>
+                        <div class="glass stat-card">
+                            <span class="stat-card__num" data-count="15">0</span><span class="stat-card__plus">+</span>
+                            <span class="stat-card__label">Teknologi Dikuasai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SKILLS ============ -->
+        <section id="skills" class="skills section" data-component="skills">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">02 — Skills</span>
+                    <h2 class="section__title">Technical <span class="accent-text">Skills</span></h2>
+                    <p class="section__subtitle">Teknologi yang saya gunakan untuk membangun aplikasi modern dan scalable.</p>
+                </div>
+
+                <div class="skills__grid">
+                    <div class="glass skills__cat reveal">
+                        <h3 class="skills__cat-title"><i class="fa-solid fa-palette"></i> Frontend</h3>
+                        <ul class="skills__list">
+                            <li class="skill" data-level="95"><span class="skill__name">React</span><span class="skill__pct">95%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="90"><span class="skill__name">Next.js</span><span class="skill__pct">90%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="92"><span class="skill__name">Tailwind CSS</span><span class="skill__pct">92%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="88"><span class="skill__name">TypeScript</span><span class="skill__pct">88%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="85"><span class="skill__name">Framer Motion</span><span class="skill__pct">85%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="glass skills__cat reveal">
+                        <h3 class="skills__cat-title"><i class="fa-solid fa-server"></i> Backend</h3>
+                        <ul class="skills__list">
+                            <li class="skill" data-level="93"><span class="skill__name">Node.js</span><span class="skill__pct">93%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="90"><span class="skill__name">Express.js</span><span class="skill__pct">90%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="88"><span class="skill__name">Python</span><span class="skill__pct">88%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="85"><span class="skill__name">FastAPI</span><span class="skill__pct">85%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="glass skills__cat reveal">
+                        <h3 class="skills__cat-title"><i class="fa-solid fa-database"></i> Database</h3>
+                        <ul class="skills__list">
+                            <li class="skill" data-level="90"><span class="skill__name">PostgreSQL</span><span class="skill__pct">90%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="87"><span class="skill__name">MongoDB</span><span class="skill__pct">87%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="83"><span class="skill__name">Firebase</span><span class="skill__pct">83%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="glass skills__cat reveal">
+                        <h3 class="skills__cat-title"><i class="fa-solid fa-robot"></i> AI &amp; Cloud</h3>
+                        <ul class="skills__list">
+                            <li class="skill" data-level="92"><span class="skill__name">OpenAI API</span><span class="skill__pct">92%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="88"><span class="skill__name">LangChain</span><span class="skill__pct">88%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="85"><span class="skill__name">Docker</span><span class="skill__pct">85%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="82"><span class="skill__name">AWS</span><span class="skill__pct">82%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                            <li class="skill" data-level="90"><span class="skill__name">Vercel</span><span class="skill__pct">90%</span><span class="skill__bar"><span class="skill__fill"></span></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PROJECTS ============ -->
+        <section id="projects" class="projects section" data-component="projects">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">03 — Projects</span>
+                    <h2 class="section__title">Featured <span class="accent-text">Projects</span></h2>
+                    <p class="section__subtitle">Beberapa karya yang paling berdampak di bidang AI dan full-stack development.</p>
+                </div>
+
+                <div class="projects__grid">
+                    <article class="glass project reveal">
+                        <div class="project__thumb">
+                            <i class="fa-solid fa-list-check project__thumb-icon"></i>
+                            <div class="project__links">
+                                <a href="https://github.com/vitaanggraenisdev" target="_blank" rel="noopener" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project__body">
+                            <h3 class="project__title">AI Task Manager</h3>
+                            <p class="project__desc">Aplikasi produktivitas cerdas dengan bantuan AI untuk melakukan prioritas dan penjadwalan tugas.</p>
+                            <ul class="project__tags">
+                                <li>React</li><li>Node.js</li><li>OpenAI API</li><li>MongoDB</li>
+                            </ul>
+                            <div class="project__actions">
+                                <a href="#" class="btn btn--primary btn--sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                <a href="https://github.com/vitaanggraenisdev" target="_blank" rel="noopener" class="btn btn--ghost btn--sm"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="glass project reveal">
+                        <div class="project__thumb">
+                            <i class="fa-solid fa-comments project__thumb-icon"></i>
+                            <div class="project__links">
+                                <a href="https://github.com/vitaanggraenisdev" target="_blank" rel="noopener" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project__body">
+                            <h3 class="project__title">Smart Chat Assistant</h3>
+                            <p class="project__desc">Chatbot AI real-time dengan conversational memory dan context management.</p>
+                            <ul class="project__tags">
+                                <li>Next.js</li><li>FastAPI</li><li>PostgreSQL</li>
+                            </ul>
+                            <div class="project__actions">
+                                <a href="#" class="btn btn--primary btn--sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                <a href="https://github.com/vitaanggraenisdev" target="_blank" rel="noopener" class="btn btn--ghost btn--sm"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="glass project reveal">
+                        <div class="project__thumb">
+                            <i class="fa-solid fa-chart-line project__thumb-icon"></i>
+                            <div class="project__links">
+                                <a href="https://github.com/vitaanggraenisdev" target="_blank" rel="noopener" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" rel="noopener" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project__body">
+                            <h3 class="project__title">DevOps Monitoring Dashboard</h3>
+                            <p class="project__desc">Dashboard monitoring server dan analitik secara real-time dengan grafik interaktif.</p>
+                            <ul class="project__tags">
+                                <li>React</li><li>Express.js</li><li>Docker</li><li>Chart.js</li>
+                            </ul>
+                            <div class="project__actions">
+                                <a href="#" class="btn btn--primary btn--sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                <a href="https://github.com/vitaanggraenisdev" target="_blank" rel="noopener" class="btn btn--ghost btn--sm"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EXPERIENCE ============ -->
+        <section id="experience" class="experience section" data-component="experience">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">04 — Experience</span>
+                    <h2 class="section__title">Work <span class="accent-text">Experience</span></h2>
+                    <p class="section__subtitle">Perjalanan profesional saya di berbagai perusahaan dan peran.</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline__item reveal">
+                        <span class="timeline__dot"></span>
+                        <div class="glass timeline__card">
+                            <span class="timeline__period">2023 — Sekarang</span>
+                            <h3 class="timeline__role">Senior Full Stack Engineer</h3>
+                            <span class="timeline__company"><i class="fa-solid fa-building"></i> Novatech Solutions</span>
+                            <p class="timeline__desc">Memimpin pengembangan platform web berskala besar dan integrasi fitur AI end-to-end.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item reveal">
+                        <span class="timeline__dot"></span>
+                        <div class="glass timeline__card">
+                            <span class="timeline__period">2021 — 2023</span>
+                            <h3 class="timeline__role">Frontend Developer</h3>
+                            <span class="timeline__company"><i class="fa-solid fa-building"></i> PixelForge Labs</span>
+                            <p class="timeline__desc">Membangun antarmuka yang responsif dan interaktif dengan React dan sistem desain modern.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item reveal">
+                        <span class="timeline__dot"></span>
+                        <div class="glass timeline__card">
+                            <span class="timeline__period">2019 — 2021</span>
+                            <h3 class="timeline__role">Junior Software Engineer</h3>
+                            <span class="timeline__company"><i class="fa-solid fa-building"></i> CloudNest AI</span>
+                            <p class="timeline__desc">Mengembangkan layanan backend dan belajar membangun aplikasi berbasis cloud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TESTIMONIALS ============ -->
+        <section id="testimonials" class="testimonials section" data-component="testimonials">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">05 — Testimonials</span>
+                    <h2 class="section__title">What People <span class="accent-text">Say</span></h2>
+                    <p class="section__subtitle">Umpan balik dari rekan kerja dan klien yang pernah bekerja sama dengan saya.</p>
+                </div>
+
+                <div class="testimonials__grid">
+                    <figure class="glass testimonial reveal">
+                        <i class="fa-solid fa-quote-left testimonial__quote"></i>
+                        <blockquote class="testimonial__text">Vita is an exceptional engineer who consistently delivers beyond expectations. Her ability to bridge AI capabilities with practical user needs is remarkable. She transformed our platform's intelligence layer in a way that measurably improved user engagement.</blockquote>
+                        <figcaption class="testimonial__author">
+                            <span class="testimonial__avatar">AF</span>
+                            <span class="testimonial__meta">
+                                <strong>Ahmad Fauzi</strong>
+                                <span>CTO, Prestasi Junior Indonesia</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="glass testimonial reveal">
+                        <i class="fa-solid fa-quote-left testimonial__quote"></i>
+                        <blockquote class="testimonial__text">Working with Vita was a pleasure. She has a rare talent for turning complex data into clear, actionable insights. Her dashboards became the go-to tool for our entire leadership team, and she always brought ideas that went far beyond the initial brief.</blockquote>
+                        <figcaption class="testimonial__author">
+                            <span class="testimonial__avatar">SR</span>
+                            <span class="testimonial__meta">
+                                <strong>Siti Rahayu</strong>
+                                <span>Product Manager, PT Indo</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="glass testimonial reveal">
+                        <i class="fa-solid fa-quote-left testimonial__quote"></i>
+                        <blockquote class="testimonial__text">Vita's technical depth combined with her product mindset makes her stand out. She delivered a full-stack AI feature in record time without compromising code quality. I'd recommend her without hesitation to any team looking for a high-impact engineer.</blockquote>
+                        <figcaption class="testimonial__author">
+                            <span class="testimonial__avatar">BS</span>
+                            <span class="testimonial__meta">
+                                <strong>Budi Santoso</strong>
+                                <span>Lead Engineer, PT. Technesia</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="contact section" data-component="contact">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__eyebrow">06 — Contact</span>
+                    <h2 class="section__title">Get In <span class="accent-text">Touch</span></h2>
+                    <p class="section__subtitle">Punya proyek atau ide untuk berkolaborasi? Saya senang mendengarnya.</p>
+                </div>
+
+                <div class="contact__grid">
+                    <div class="contact__info reveal">
+                        <div class="glass contact__info-card">
+                            <h3 class="contact__info-title">Let's work together</h3>
+                            <p class="contact__info-text">Saya selalu terbuka untuk mendiskusikan proyek baru, ide kreatif, atau peluang untuk menjadi bagian dari sesuatu yang hebat.</p>
+
+                            <ul class="contact__info-items">
+                                <li class="contact__info-item">
+                                    <span class="contact__info-icon"><i class="fa-solid fa-envelope"></i></span>
+                                    <span><span class="contact__info-label">Email</span><a href="mailto:vita@prestasijunior.org" class="contact__info-value">vita@prestasijunior.org</a></span>
+                                </li>
+                                <li class="contact__info-item">
+                                    <span class="contact__info-icon"><i class="fa-solid fa-phone"></i></span>
+                                    <span><span class="contact__info-label">Telepon</span><a href="tel:08512345678" class="contact__info-value">08512345678</a></span>
+                                </li>
+                                <li class="contact__info-item">
+                                    <span class="contact__info-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    <span><span class="contact__info-label">Lokasi</span><span class="contact__info-value">Jakarta, Indonesia</span></span>
+                                </li>
+                            </ul>
+
+                            <div class="contact__socials">
+                                <a href="https://github.com/vitaanggraenisdev" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://linkedin.com/in/vitaanggraenidev" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://x.com/vitaanggraenidev" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="glass contact__map">
+                            <div class="contact__map-placeholder">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                <p>Jakarta, Indonesia</p>
+                                <span>DKI Jakarta Province</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact__form-wrapper reveal">
+                        <div class="glass contact__form-card">
+                            <form class="contact__form" id="contactForm" novalidate>
+                                <div class="form__group">
+                                    <label class="form__label" for="formName">Nama Lengkap</label>
+                                    <div class="form__input-wrapper">
+                                        <i class="fa-solid fa-user form__input-icon"></i>
+                                        <input type="text" id="formName" name="name" class="form__input" placeholder="Nama lengkap Anda" required autocomplete="name" />
+                                    </div>
+                                    <span class="form__error" id="nameError"></span>
+                                </div>
+
+                                <div class="form__group">
+                                    <label class="form__label" for="formEmail">Email</label>
+                                    <div class="form__input-wrapper">
+                                        <i class="fa-solid fa-envelope form__input-icon"></i>
+                                        <input type="email" id="formEmail" name="email" class="form__input" placeholder="email@anda.com" required autocomplete="email" />
+                                    </div>
+                                    <span class="form__error" id="emailError"></span>
+                                </div>
+
+                                <div class="form__group">
+                                    <label class="form__label" for="formMessage">Pesan</label>
+                                    <div class="form__input-wrapper form__input-wrapper--textarea">
+                                        <i class="fa-solid fa-message form__input-icon form__input-icon--textarea"></i>
+                                        <textarea id="formMessage" name="message" class="form__input form__textarea" placeholder="Ceritakan tentang proyek atau ide Anda..." rows="5" required></textarea>
+                                    </div>
+                                    <span class="form__error" id="messageError"></span>
+                                </div>
+
+                                <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                                    <span class="btn__text"><i class="fa-solid fa-paper-plane"></i> Kirim Pesan</span>
+                                    <span class="btn__loading" hidden><i class="fa-solid fa-spinner fa-spin"></i> Mengirim...</span>
+                                </button>
+
+                                <div class="form__feedback" id="formFeedback" role="alert"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer" aria-label="Site footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#home" class="nav__logo footer__logo">DN</a>
+                    <p class="footer__tagline">Membangun pengalaman digital cerdas dengan AI dan teknologi web modern.</p>
+                    <div class="footer__socials">
+                        <a href="https://github.com/vitaanggraenisdev" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/vitaanggraenidev" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://x.com/vitaanggraenidev" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="mailto:vita@prestasijunior.org" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__nav">
+                    <h4 class="footer__nav-title">Navigasi</h4>
+                    <ul class="footer__nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__nav">
+                    <h4 class="footer__nav-title">Tech Stack</h4>
+                    <ul class="footer__nav-list">
+                        <li><span>React &amp; Next.js</span></li>
+                        <li><span>Node.js &amp; FastAPI</span></li>
+                        <li><span>OpenAI &amp; LangChain</span></li>
+                        <li><span>PostgreSQL &amp; MongoDB</span></li>
+                        <li><span>Docker &amp; Vercel</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h4 class="footer__nav-title">Kontak</h4>
+                    <div class="footer__contact-items">
+                        <a href="mailto:vita@prestasijunior.org" class="footer__contact-item"><i class="fa-solid fa-envelope"></i> vita@prestasijunior.org</a>
+                        <a href="tel:08512345678" class="footer__contact-item"><i class="fa-solid fa-phone"></i> 08512345678</a>
+                        <span class="footer__contact-item"><i class="fa-solid fa-location-dot"></i> Jakarta, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; <span id="footerYear"></span> Dicky Nofyan Hidayat, ST, Gr. All rights reserved.</p>
+                <p class="footer__made-with">Crafted with <i class="fa-solid fa-heart" style="color:#f43f5e;"></i> &amp; <i class="fa-solid fa-brain" style="color:var(--accent);"></i></p>
+            </div>
+        </div>
+
+        <button class="scroll-top" id="scrollTop" aria-label="Scroll ke atas">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

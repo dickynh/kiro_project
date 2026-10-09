@@ -1,0 +1,55 @@
+/* ============================================================
+   Design Tokens — Dark Futuristic Developer Portfolio
+   ============================================================ */
+:root {
+    /* Base surfaces */
+    --bg-900: #05060a;
+    --bg-800: #0a0c14;
+    --bg-700: #0f1220;
+    --surface: rgba(255, 255, 255, 0.04);
+    --surface-strong: rgba(255, 255, 255, 0.07);
+    --border: rgba(255, 255, 255, 0.09);
+    --border-strong: rgba(255, 255, 255, 0.16);
+
+    /* Text */
+    --text: #e9ecf5;
+    --text-soft: #a7adc2;
+    --text-dim: #6b7390;
+
+    /* Accent — soft glowing */
+    --accent: #7c5cff;
+    --accent-2: #22d3ee;
+    --accent-3: #f065c0;
+    --accent-glow: rgba(124, 92, 255, 0.45);
+    --cyan-glow: rgba(34, 211, 238, 0.35);
+
+    /* Gradients */
+    --grad-accent: linear-gradient(120deg, #7c5cff 0%, #22d3ee 100%);
+    --grad-accent-soft: linear-gradient(120deg, #8e74ff 0%, #45dcef 100%);
+    --grad-text: linear-gradient(120deg, #c3b4ff 0%, #7c5cff 45%, #22d3ee 100%);
+
+    /* Typography */
+    --font-head: 'Sora', system-ui, sans-serif;
+    --font-body: 'Space Grotesk', system-ui, sans-serif;
+
+    /* Spacing scale */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.75rem;
+    --space-lg: 3rem;
+    --space-xl: 5rem;
+    --space-2xl: 8rem;
+
+    /* Layout */
+    --container: 1180px;
+    --radius-sm: 12px;
+    --radius: 20px;
+    --radius-lg: 28px;
+
+    /* Effects */
+    --blur: 18px;
+    --shadow-soft: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+    --shadow-glow: 0 0 40px -8px var(--accent-glow);
+    --transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-fast: 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}

@@ -1,0 +1,58 @@
+/* ============================================================
+   Projects Section
+   ============================================================ */
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+}
+
+.project {
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.project:hover { transform: translateY(-8px); border-color: var(--border-strong); box-shadow: var(--shadow-glow); }
+
+.project__thumb {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    display: grid; place-items: center;
+    background: linear-gradient(140deg, rgba(124,92,255,0.18), rgba(34,211,238,0.14));
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+}
+.project__thumb::after {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 30% 20%, var(--accent-glow), transparent 60%);
+    opacity: 0.5;
+}
+.project__thumb-icon { font-size: 3rem; color: #fff; opacity: 0.85; position: relative; z-index: 1; }
+
+.project__links {
+    position: absolute; top: 0.9rem; right: 0.9rem; z-index: 2;
+    display: flex; gap: 0.5rem;
+    opacity: 0; transform: translateY(-6px);
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+.project:hover .project__links { opacity: 1; transform: none; }
+.project__links a {
+    display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px;
+    background: rgba(5,6,10,0.6); backdrop-filter: blur(8px); border: 1px solid var(--border-strong);
+    color: #fff; transition: background var(--transition-fast);
+}
+.project__links a:hover { background: var(--accent); }
+
+.project__body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1; }
+.project__title { font-size: 1.2rem; }
+.project__desc { font-size: 0.92rem; color: var(--text-soft); flex: 1; }
+
+.project__tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.project__tags li {
+    font-size: 0.74rem; font-family: var(--font-head); font-weight: 500;
+    padding: 0.3rem 0.7rem; border-radius: 999px;
+    background: var(--surface-strong); border: 1px solid var(--border); color: var(--text-soft);
+}
+
+.project__actions { display: flex; gap: 0.6rem; margin-top: 0.4rem; }
+.project__actions .btn { flex: 1; justify-content: center; }

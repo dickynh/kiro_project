@@ -1,0 +1,60 @@
+/* ============================================================
+   Responsive — Tablet & Mobile
+   ============================================================ */
+
+/* ---------- Tablet ---------- */
+@media (max-width: 960px) {
+    .hero__inner { grid-template-columns: 1fr; text-align: center; gap: var(--space-md); }
+    .hero__content { order: 2; }
+    .hero__visual { order: 1; }
+    .hero__badge, .hero__tagline { margin-inline: auto; }
+    .hero__actions, .hero__socials { justify-content: center; }
+    .hero__photo-wrap { width: min(300px, 70%); }
+
+    .about__grid { grid-template-columns: 1fr; }
+
+    .projects__grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials__grid { grid-template-columns: 1fr; }
+    .contact__grid { grid-template-columns: 1fr; }
+    .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- Navbar collapses to drawer (7 links need room earlier) ---------- */
+@media (max-width: 900px) {
+    .nav__cta { display: none; }
+    .nav__toggle { display: flex; }
+
+    .nav__list {
+        position: fixed; inset: 0 0 0 auto; width: min(320px, 84vw);
+        background: rgba(10, 12, 20, 0.94); backdrop-filter: blur(var(--blur));
+        border-left: 1px solid var(--border);
+        transform: translateX(100%); transition: transform var(--transition);
+        padding: 6rem 1.5rem 2rem; z-index: 90;
+        overflow-y: auto;
+        flex-direction: column; gap: 0.5rem;
+    }
+    .nav__list.is-open { transform: translateX(0); }
+    .nav__link { display: block; padding: 0.85rem 1rem; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 680px) {
+    .section { padding-block: var(--space-xl); }
+    .about__stats { grid-template-columns: 1fr 1fr; }
+    .about__card { padding: 1.5rem; }
+    .hero { padding-top: 6rem; }
+    .hero__actions { flex-direction: column; }
+    .hero__actions .btn { width: 100%; justify-content: center; }
+
+    .skills__grid { grid-template-columns: 1fr; }
+    .projects__grid { grid-template-columns: 1fr; }
+    .footer__grid { grid-template-columns: 1fr; text-align: center; }
+    .footer__tagline { margin-inline: auto; }
+    .footer__socials, .contact__socials { justify-content: center; }
+    .footer__bottom { flex-direction: column; text-align: center; }
+    .project__actions { flex-direction: column; }
+}
+
+@media (max-width: 400px) {
+    .about__stats { grid-template-columns: 1fr; }
+}
